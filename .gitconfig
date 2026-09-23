@@ -1,0 +1,12 @@
+[user]
+	name = webbingon
+	email = 271410277+webbingon@users.noreply.github.com
+	signingKey = 054BDE6C43B5A749
+[ghq]
+	root = /home/webbingon/Projects/ghq
+[commit]
+	gpgSign = true
+[tag]
+	gpgSign = true
+[init]
+	defaultBranch = main
