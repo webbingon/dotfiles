@@ -59,5 +59,5 @@ hl.bind("XF86AudioPrev",  hl.dsp.exec_cmd("playerctl previous"),   { locked = tr
 hl.bind("XF86Display", hl.dsp.exec_cmd("wdisplay"), { locked = true })
 
 -- Screenshots
-hl.bind("Print", hl.dsp.exec_cmd("grim ~/Pictures/$(date +'%Y-%m-%d_%H-%M-%S').png"), { locked = true })
-hl.bind("XF86SelectiveScreenShot", hl.dsp.exec_cmd("grim -g \"$(slurp)\" - | wl-copy"), { locked = true })
+hl.bind("Print", hl.dsp.exec_cmd("grim ~/Pictures/Screenshots/Screenshot_$(date +'%Y%m%d_%H%M%S').png && canberra-gtk-play -i camera-shutter"), { locked = true })
+hl.bind("XF86SelectiveScreenShot", hl.dsp.exec_cmd("f=~/Pictures/Screenshots/Screenshot_$(date +'%Y%m%d_%H%M%S').png && grim -g \"$(slurp)\" \"$f\" && wl-copy < \"$f\" && canberra-gtk-play -i camera-shutter"), { locked = true })
