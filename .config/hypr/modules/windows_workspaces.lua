@@ -71,3 +71,31 @@ hl.window_rule({
     match = { class = "btop" },
     workspace = "5"
 })
+
+hl.window_rule({
+    name = "apple-music-web",
+    match = { title = "^(.*Apple.Music.*)$" },
+    workspace = "1",
+    size = {931, 1125},
+    move = {967, 53},
+    float = true,
+})
+
+hl.window_rule({
+    name = "cava",
+    match = { class = "^cava$" },
+    workspace = "1",
+    size = {931, 556},
+    move = {22, 53},
+    float = true,
+})
+
+hl.window_rule({
+    name = "clock-rs",
+    match = { class = "^clock-rs$"},
+    workspace = "1",
+    size = {931, 555},
+    move = {22, 623},
+    float = true,
+})
+
