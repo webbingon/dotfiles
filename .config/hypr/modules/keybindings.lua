@@ -61,3 +61,8 @@ hl.bind("XF86Display", hl.dsp.exec_cmd("wdisplay"), { locked = true })
 -- Screenshots
 hl.bind("Print", hl.dsp.exec_cmd("grim ~/Pictures/Screenshots/Screenshot_$(date +'%Y%m%d_%H%M%S').png && canberra-gtk-play -i camera-shutter"), { locked = true })
 hl.bind("XF86SelectiveScreenShot", hl.dsp.exec_cmd("f=~/Pictures/Screenshots/Screenshot_$(date +'%Y%m%d_%H%M%S').png && grim -g \"$(slurp)\" \"$f\" && wl-copy < \"$f\" && canberra-gtk-play -i camera-shutter"), { locked = true })
+
+-- Disable XF86Sleep and XF86Wakeup
+hl.bind("XF86Sleep", hl.dsp.exec_cmd("true"))
+hl.bind("XF86WakeUp", hl.dsp.exec_cmd("true"))
+
