@@ -35,3 +35,4 @@ export LANG="en_US.UTF-8"
 ### Starship
 eval "$(starship init zsh)"
 
+eval "$(/usr/bin/mise activate zsh)"
