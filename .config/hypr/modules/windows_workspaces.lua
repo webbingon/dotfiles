@@ -73,8 +73,8 @@ hl.window_rule({
 })
 
 hl.window_rule({
-    name = "apple-music-web",
-    match = { title = "^(.*Apple.Music.*)$" },
+    name = "kopuz",
+    match = { class = "^kopuz$" },
     workspace = "1",
     size = {931, 1125},
     move = {967, 53},
