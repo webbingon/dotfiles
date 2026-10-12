@@ -20,7 +20,7 @@
         "status-icons": {
             "paused": ""
         },
-        "dynamic-order": ["title", "artist"]
+        "dynamic-order": ["title", "album", "artist"]
     },
     "pulseaudio": {
         "format": "{icon} {volume}%",
