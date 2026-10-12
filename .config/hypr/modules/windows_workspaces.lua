@@ -99,3 +99,9 @@ hl.window_rule({
     float = true,
 })
 
+hl.window_rule({
+    name = "bitwarden",
+    match = { title = "拡張機能: (Bitwarden パスワードマネージャー) - Bitwarden — Mozilla Firefox" },
+    float = true
+})
+
