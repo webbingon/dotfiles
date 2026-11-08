@@ -5,7 +5,7 @@
     "custom/power": {
         "format": "⏻",
         "tooltip": false,
-        "on-click": "wlogout"
+        "on-click": "uwsm app -- wlogout"
     },
     "tray": {
         "spacing": 10
@@ -30,14 +30,14 @@
             "headphone": "",
             "speaker": "󰓃"
         },
-        "on-click": "pavucontrol"
+        "on-click": "uwsm app -- pavucontrol"
     },
     "bluetooth": {
         "format": "󰂯",
         "format-disabled": "󰂲 disabled",
         "format-off": "󰂲",
         "format-connected": "󰂱",
-        "on-click": "flatpak run io.github.kaii_lb.Overskride"
+        "on-click": "uwsm app -- flatpak run io.github.kaii_lb.Overskride"
     },
     "network": {
         "family": "ipv4_6",
@@ -49,7 +49,7 @@
         "format-disabled": "󰅛 Disabled",
         "tooltip": true,
         "tooltip-format": "{ifname} / SSID: {essid} / IP Addresses: {ipaddr} ",
-        "on-click": "nmgui"
+        "on-click": "uwsm app -- nmgui"
     },
     "battery": {
         "format": "{icon} {capacity}%",

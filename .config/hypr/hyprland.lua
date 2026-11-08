@@ -7,10 +7,10 @@ require("modules.monitors")
 ---------------------
 
 -- Set programs that you use
-terminal    = "kitty"
-fileManager = "dolphin"
-menu        = "hyprlauncher"
-browser     = "flatpak run org.mozilla.firefox"
+terminal    = "uwsm app -- kitty"
+fileManager = "uwsm app -- dolphin"
+menu        = "uwsm app -- hyprlauncher"
+browser     = "uwsm app -- flatpak run org.mozilla.firefox"
 
 require("modules.autostart")
 

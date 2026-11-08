@@ -8,7 +8,7 @@ local mainMod = "SUPER" -- Sets "Windows" key as main modifier
 hl.bind(mainMod .. " + Q", hl.dsp.exec_cmd(terminal))
 local closeWindowBind = hl.bind(mainMod .. " + C", hl.dsp.window.close())
 -- closeWindowBind:set_enabled(false)
-hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
+hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("uwsm stop"))
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(menu))
@@ -56,11 +56,11 @@ hl.bind("XF86AudioPlay",  hl.dsp.exec_cmd("playerctl play-pause"), { locked = tr
 hl.bind("XF86AudioPrev",  hl.dsp.exec_cmd("playerctl previous"),   { locked = true })
 
 -- Display
-hl.bind("XF86Display", hl.dsp.exec_cmd("wdisplay"), { locked = true })
+hl.bind("XF86Display", hl.dsp.exec_cmd("uwsm app -- wdisplay"), { locked = true })
 
 -- Screenshots
-hl.bind("Print", hl.dsp.exec_cmd("grim ~/Pictures/Screenshots/Screenshot_$(date +'%Y%m%d_%H%M%S').png && canberra-gtk-play -i camera-shutter"), { locked = true })
-hl.bind("XF86SelectiveScreenShot", hl.dsp.exec_cmd("f=~/Pictures/Screenshots/Screenshot_$(date +'%Y%m%d_%H%M%S').png && grim -g \"$(slurp)\" \"$f\" && wl-copy < \"$f\" && canberra-gtk-play -i camera-shutter"), { locked = true })
+hl.bind("Print", hl.dsp.exec_cmd("uwsm app -- sh -c \"grim ~/Pictures/Screenshots/Screenshot_$(date +'%Y%m%d_%H%M%S').png && canberra-gtk-play -i camera-shutter\""), { locked = true })
+hl.bind("XF86SelectiveScreenShot", hl.dsp.exec_cmd("uwsm app -- sh -c \"f=~/Pictures/Screenshots/Screenshot_$(date +'%Y%m%d_%H%M%S').png && grim -g \\\"$(slurp)\\\" \\\"$f\\\" && wl-copy < \\\"$f\\\" && canberra-gtk-play -i camera-shutter\""), { locked = true })
 
 -- Disable XF86Sleep and XF86Wakeup
 hl.bind("XF86Sleep", hl.dsp.exec_cmd("true"))
