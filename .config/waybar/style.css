@@ -19,7 +19,7 @@ tooltip label {
 }
 
 #waybar {
-    background: alpha(@background, 0.6);
+    background: alpha(@background, 0.4);
     border-radius: 0px;
 }
 
